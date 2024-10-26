@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --black: "#1C1E25";
+  --pink: "#666565";
+  --orange: "#ED5221";
+}
+
+body {
+  font-family: "Lato";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.dark {
+  transition: all 500ms ease-in-out;
+  background-color: #000030;
+  color: #ed5221;
+  border-bottom-color: #00000020;
+}
+
+.light {
+  transition: all 500ms ease-in-out;
+  color: #4c5156;
+  background-color: #f9f9f9;
+  border-bottom-color: #00000020;
+}

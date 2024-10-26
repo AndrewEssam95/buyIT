@@ -1,0 +1,9 @@
+.navBar {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: inherit;
+  text-transform: capitalize;
+}

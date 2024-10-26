@@ -1,0 +1,42 @@
+.cartCounter {
+  position: absolute;
+  background-color: #ed5221;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  top: -20%;
+  right: -20%;
+}
+
+@keyframes pumping {
+  0% {
+    scale: 1;
+  }
+  20% {
+    scale: 0.8;
+  }
+  30% {
+    scale: 1.1;
+  }
+  70% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.pumpingEffect {
+  animation-name: pumping;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+}
+
+.cartContainer {
+  position: relative;
+}

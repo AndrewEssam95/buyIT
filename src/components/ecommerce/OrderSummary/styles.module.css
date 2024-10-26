@@ -1,0 +1,57 @@
+.container {
+  width: 32%;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  height: fit-content;
+  background-color: #fff;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.price {
+  color: black;
+  font-size: 25px;
+}
+
+.activeCheckoutButton {
+  background-color: #ed5221;
+  border-radius: 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.disabledCheckoutButton {
+  background-color: #ed522180;
+  border-radius: 25px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.quantity {
+  font-size: 30px;
+  color: white;
+}

@@ -1,0 +1,17 @@
+.container {
+  width: 65%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: fit-content;
+}
+
+.emptyCart {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: white;
+  min-height: 100%;
+}

@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 600;
+  color: #4c5156;
+  letter-spacing: 1px;
+}
+
+.arrowsContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ed5221;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ed5221;
+  background-color: #ffebe6;
+  transition: all ease-in-out 300ms;
+}
+
+.arrow:hover {
+  background-color: #ed5221;
+  color: #ffebe6;
+}
