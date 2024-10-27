@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../CustomNavbar/CustomNavbar";
 
 import {
   SlSocialPintarest,
@@ -22,6 +22,7 @@ const {
   icons,
   icon,
   copyrights,
+  responsiveText,
 } = styles;
 
 const Footer = () => {
@@ -29,18 +30,11 @@ const Footer = () => {
     <footer className={footerContainer}>
       <Container className={wrapper}>
         <div className={left}>
-          <h1 className={footerH1}>
+          <h1 className={`${footerH1} ${responsiveText}`}>
             are <br />
             you <br />
             interested ?
           </h1>
-          <Link to="/" className={footerLink}>
-            Shopping Now <HiOutlineArrowNarrowRight />
-          </Link>
-        </div>
-        <div className={right}>
-          <Logo light />
-          <Navbar flexCol={true} light={true} />
           <div className={icons}>
             <Link to="#" className={icon}>
               <SlSocialFacebook size={20} color="#fff" />
@@ -55,6 +49,13 @@ const Footer = () => {
               <SlSocialPintarest size={20} color="#fff" />
             </Link>
           </div>
+          <Link to="/" className={footerLink}>
+            Shopping Now <HiOutlineArrowNarrowRight />
+          </Link>
+        </div>
+        <div className={right}>
+          <Logo light />
+          <Navbar flexCol={true} light={true} />
         </div>
       </Container>
       <div className={copyrights}>

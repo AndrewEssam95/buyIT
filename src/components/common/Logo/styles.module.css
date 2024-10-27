@@ -2,6 +2,9 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 500ms ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .span {
@@ -9,6 +12,15 @@
   color: white;
   padding: 0 20px;
   border-radius: 10px;
+  font-size: inherit;
+}
+
+.responsive {
   font-size: 35px;
-  margin-left: -5px;
+}
+
+@media (max-width: 576px) {
+  .responsive {
+    font-size: 30px;
+  }
 }

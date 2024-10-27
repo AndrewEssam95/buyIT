@@ -27,7 +27,7 @@ const ProductsCollection = () => {
           scrollbarWidth: "none",
           transform: `translateX(0)`,
         }}>
-        {Array(20)
+        {Array(10)
           .fill(0)
           .map((_, index) => (
             <Col

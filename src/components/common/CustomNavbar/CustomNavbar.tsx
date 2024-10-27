@@ -11,7 +11,7 @@ const navLinks = [
   { title: "contact", path: "/contact" },
 ];
 
-const Navbar = ({
+const CustomNavbar = ({
   flexCol = false,
   light = false,
 }: {
@@ -25,7 +25,7 @@ const Navbar = ({
     if (theme === "dark" || light) {
       return pathname === path ? "text-success" : "text-light";
     } else if (theme === "light" || !light) {
-      return pathname === path ? "text-black" : "";
+      return pathname === path ? "text-black" : "text-black-50";
     }
   };
 
@@ -48,4 +48,4 @@ const Navbar = ({
   );
 };
 
-export default Navbar;
+export default CustomNavbar;

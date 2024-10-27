@@ -13,10 +13,10 @@
 
 .left,
 .right {
-  height: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  gap: 20px;
   padding-bottom: 20px;
 }
 
@@ -29,9 +29,42 @@
 .footerH1 {
   color: #fff;
   text-transform: uppercase;
-  font-size: 100px;
   font-weight: bold;
   padding-top: 50px;
+}
+
+.responsiveText {
+  font-size: 100px;
+}
+
+@media (min-width: 100px) {
+  .responsiveText {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 576px) {
+  .responsiveText {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 767px) {
+  .responsiveText {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 991px) {
+  .responsiveText {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsiveText {
+    font-size: 85px;
+  }
 }
 
 .footerLink {
@@ -40,9 +73,9 @@
 
 .right {
   width: 30%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
   padding-left: 20px;
-  padding-top: 40px;
 }
 
 .icons {
