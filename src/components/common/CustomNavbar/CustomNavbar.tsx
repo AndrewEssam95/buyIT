@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./styles.module.css";
 import { useAppSelector } from "@store/hooks";
+import { useTranslation } from "react-i18next";
 
 const { navBar, navLink } = styles;
 
@@ -21,6 +22,8 @@ const CustomNavbar = ({
   const { pathname } = useLocation();
   const theme = useAppSelector((state) => state.theme.theme);
 
+  const [t] = useTranslation("global");
+
   const textColor = (path: string) => {
     if (theme === "dark" || light) {
       return pathname === path ? "text-success" : "text-light";
@@ -40,7 +43,7 @@ const CustomNavbar = ({
             className={`${navLink} ${textColor(link.path)}`}
             key={index}
             to={link.path}>
-            {link.title}
+            {t(`header.navbar.${[link.title]}`)}
           </Link>
         );
       })}

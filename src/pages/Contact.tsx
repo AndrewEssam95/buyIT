@@ -3,9 +3,11 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import styles from "./styles.module.css";
 import { useAppDispatch } from "@store/hooks";
 import actSendMessage from "@store/messages/act/actSendMessage";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const dispatch = useAppDispatch();
+  const [t] = useTranslation("global");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -26,20 +28,17 @@ const Contact = () => {
 
   return (
     <Container className="mt-1 mb-5">
-      <h1 className={styles.title}>Contact Us</h1>
+      <h1 className={styles.title}>{t("contact.title")}</h1>
       <Row className="text-center mb-4">
         <Col>
-          <p>
-            We would love to hear from you! Please fill out the form below to
-            get in touch.
-          </p>
+          <p className="fs-4">{t("contact.description")}</p>
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 6, offset: 3 }}>
+        <Col md={{ span: 9, offset: 3 }} lg={{ span: 8 }}>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>{t("contact.name")}</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter your name"
@@ -51,7 +50,7 @@ const Contact = () => {
             </Form.Group>
 
             <Form.Group controlId="formEmail" className="mb-3">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>{t("contact.email")}</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter your email"
@@ -63,7 +62,7 @@ const Contact = () => {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <Form.Label>Message</Form.Label>
+              <Form.Label>{t("contact.message")}</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={5}
@@ -76,7 +75,7 @@ const Contact = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit" className="w-100">
-              Send Message
+              {t("contact.button")}
             </Button>
           </Form>
         </Col>

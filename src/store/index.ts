@@ -8,6 +8,7 @@ import orders from "./order/ordersSlice";
 import messages from "./messages/messagesSlice";
 import theme from "./theme/themeSlice";
 import storage from "redux-persist/lib/storage";
+import language from "./language/languageSlice";
 
 import {
   FLUSH,
@@ -50,12 +51,19 @@ const themePersistConfig = {
   whitelist: ["theme"],
 };
 
+const languagePersistConfig = {
+  key: "language",
+  storage,
+  whitelist: ["language", "pageDirection"],
+};
+
 const rootReducer = combineReducers({
   registerAuth: persistReducer(authPersistConfig, registerAuth),
   categories,
   products,
   messages,
   theme: persistReducer(themePersistConfig, theme),
+  language: persistReducer(languagePersistConfig, language),
   orders,
   cart: persistReducer(cartPersistConfig, cart),
   wishlist: persistReducer(wishlistPersistConfig, wishlist),

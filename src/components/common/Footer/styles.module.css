@@ -22,7 +22,6 @@
 
 .left {
   width: 70%;
-  border-right: 1px solid #666565;
   justify-content: space-between;
 }
 
@@ -31,6 +30,13 @@
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 50px;
+}
+
+.border {
+  height: 100%;
+  width: 1px;
+  background-color: #666565;
+  margin: 0 20px;
 }
 
 .responsiveText {
@@ -74,6 +80,7 @@
 .right {
   width: 30%;
   justify-content: center;
+  align-items: start;
   gap: 50px;
   padding-left: 20px;
 }

@@ -1,23 +1,16 @@
 import LottieHandler from "@components/feedback/LottieHandler/LottieHandler";
 import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const [t] = useTranslation("global");
+
   return (
     <Container className="my-3">
       <Row className="align-items-center">
         <Col md={6}>
-          <h2>About BuyIT Store</h2>
-          <p>
-            Welcome to BuyIT store! We are dedicated to bringing you the best
-            products with an easy and secure shopping experience. Our mission is
-            to offer a wide range of high-quality items at competitive prices,
-            while providing excellent customer service to ensure satisfaction.
-          </p>
-          <p>
-            Whether you're looking for the latest trends or unique, hard-to-find
-            products, we have something for everyone. Shop with us and discover
-            a seamless online shopping journey.
-          </p>
+          <h2 className="mb-4">{t("about.titleOne")}</h2>
+          <p>{t("about.description")}</p>
         </Col>
         <Col md={6}>
           <LottieHandler type="about" />
@@ -25,12 +18,12 @@ const About = () => {
       </Row>
       <Row className="mt-3">
         <Col>
-          <h3>Why Choose Us?</h3>
+          <h3>{t("about.titleTwo")}</h3>
           <ul>
-            <li>Wide selection of products</li>
-            <li>Competitive pricing</li>
-            <li>Fast and secure checkout process</li>
-            <li>Excellent customer service</li>
+            <li>{t("about.listItems.itemOne")}</li>
+            <li>{t("about.listItems.itemTwo")}</li>
+            <li>{t("about.listItems.itemThree")}</li>
+            <li>{t("about.listItems.itemFour")}</li>
           </ul>
         </Col>
       </Row>

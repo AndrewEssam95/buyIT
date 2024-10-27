@@ -1,15 +1,17 @@
 import Logo from "../Logo/Logo";
 import CustomNavbar from "../CustomNavbar/CustomNavbar";
-import { Button, Col, Container, Offcanvas, Row } from "react-bootstrap";
+import { Button, Container, Offcanvas } from "react-bootstrap";
 import styles from "./styles.module.css";
 import HeaderRightBar from "../HeaderRightBar/HeaderRightBar";
 import { useState } from "react";
 import { HiBars3CenterLeft } from "react-icons/hi2";
+import { useAppSelector } from "@store/hooks";
 
 const { headerContainer, container } = styles;
 
 const Header = () => {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const theme = useAppSelector((state) => state.theme.theme);
 
   return (
     <header className={headerContainer}>
@@ -21,9 +23,15 @@ const Header = () => {
             onClick={() => setShowOffcanvas(!showOffcanvas)}>
             <HiBars3CenterLeft size={30} />
           </Button>
-          <Offcanvas responsive="lg" show={showOffcanvas}>
+          <Offcanvas
+            responsive="lg"
+            show={showOffcanvas}
+            style={{ backgroundColor: "black" }}>
             <Offcanvas.Header closeButton></Offcanvas.Header>
-            <Offcanvas.Body>
+            <Offcanvas.Body
+              style={{
+                backgroundColor: theme === "dark" ? "#000030" : "#f9f9f9",
+              }}>
               <CustomNavbar flexCol={showOffcanvas} />
             </Offcanvas.Body>
           </Offcanvas>

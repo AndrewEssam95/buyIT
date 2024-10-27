@@ -1,0 +1,42 @@
+{
+  "header": {
+    "navbar": {
+      "home": "home",
+      "about": "about",
+      "blogs": "blogs",
+      "contact": "contact"
+    },
+    "user": {
+      "profile": "profile",
+      "orders": "Orders",
+      "logOut": "Log Out"
+    },
+    "hello": "Hello",
+    "currentLanguage": "EN"
+  },
+  "about": {
+    "titleOne": "About BuyIT Store",
+    "description": "Welcome to BuyIT store! We are dedicated to bringing you the best products with an easy and secure shopping experience. Our mission is to offer a wide range of high-quality items at competitive prices, while providing excellent customer service to ensure satisfaction.\nWhether you're looking for the latest trends or unique, hard-to-find products, we have something for everyone. Shop with us and discover a seamless online shopping journey.",
+    "titleTwo": "Why Choose Us?",
+    "listItems": {
+      "itemOne": "Wide selection of products",
+      "itemTwo": "Competitive pricing",
+      "itemThree": "Fast and secure checkout process",
+      "itemFour": "Excellent customer service"
+    }
+  },
+  "blogs": {},
+  "contact": {
+    "title": "Contat Us",
+    "description": "We would love to hear from you! Please fill out the form below toget in touch.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "button": "Send Message"
+  },
+  "footer": {
+    "title": "are\nyou\ninterested?",
+    "button": "Shopping Now",
+    "copyrights": "copyrights buyIT company 2024 - all rights reserved"
+  }
+}

@@ -4,3 +4,10 @@
   justify-content: flex-end;
   gap: 15px;
 }
+
+.languageToggler {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+}

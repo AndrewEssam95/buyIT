@@ -6,6 +6,7 @@ import { useAppSelector } from "@store/hooks";
 
 const MainLayout = () => {
   const theme = useAppSelector((state) => state.theme.theme);
+  const { pageDirection } = useAppSelector((state) => state.language);
   const location = useLocation();
 
   useLayoutEffect(() => {
@@ -13,7 +14,7 @@ const MainLayout = () => {
   }, [location.pathname]);
 
   return (
-    <div className={theme}>
+    <div className={`${theme} ${pageDirection}`}>
       <Header />
       <Outlet />
       <Footer />
